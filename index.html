@@ -9,14 +9,54 @@
 
 <body>
 
-        <div id="textblock">
+    <div id="wrapper">
 
-                Hello World!
+        <div id="block1">
+
+                <button type="button" onclick="buttonred()">Red</button>
 
         </div>
 
-        <button type="button" onclick="buttonred()">Red</button>
-   
+        <div id="block2">
+
+                <button type="button" onclick="enlarge()">Enlarge</button>
+                <button type="button" onclick="resize()">Resize</button>
+                <button type="button" onclick="buttonorange()">Orange</button>
+
+        </div>    
+
+        <div id="block3" onmouseover="buttongreen()" onmouseout="buttonblue()">
+
+        </div>
+        <div id="block4">
+
+                <button type="button" onclick="buttongrey()">Grey</button>
+
+        </div>
+        <div id="block5">
+            
+                <input id="textbox" type="text">
+                <button type="button" onclick="whatevercolor()">Set color</button>
+
+        </div>
+        <div id="block6">
+
+                <button id="changing_btn" type="button" onclick="buttonpink()">Change to Pink</button>
+                <p id="colorname"></p>
+
+        </div>
+        
+    </div>
+
+    <button type="button" onclick="reverse()">Reverse</button>
+
+    <button type="button" onclick="mobile()">Mobile</button>
+
+    <button type="button" onclick="determinecolor()">Determine Color</button>
+
+    <p id="colorblock1"></p>
+    
+
 </body>
 
 </html>
