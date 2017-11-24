@@ -89,14 +89,14 @@ function buttonpink(){
 
 // Reversing all modifications
 
-function reverse(){
-    document.getElementById("block1").style.backgroundColor = "blue";
-    document.getElementById("block2").style.backgroundColor = "blue";
-    document.getElementById("block3").style.backgroundColor = "blue";
-    document.getElementById("block4").style.backgroundColor = "blue";
-    document.getElementById("block5").style.backgroundColor = "blue";
-    document.getElementById("block6").style.backgroundColor = "blue";
-    document.getElementById("block2").style.gridRowEnd = "3";
+/*function reverse(){
+    document.getElementById("block1").style.backgroundColor = "";
+    document.getElementById("block2").style.backgroundColor = "";
+    document.getElementById("block3").style.backgroundColor = "";
+    document.getElementById("block4").style.backgroundColor = "";
+    document.getElementById("block5").style.backgroundColor = "";
+    document.getElementById("block6").style.backgroundColor = "";
+    document.getElementById("block2").style.gridRowEnd = "";
 
     document.getElementById("block1").style.gridColumnEnd = "3";
     document.getElementById("block2").style.gridColumnStart = "3";
@@ -110,4 +110,36 @@ function reverse(){
     document.getElementById("block5").style.gridColumnEnd = "initial";
     document.getElementById("block6").style.gridColumnStart = "initial";
     document.getElementById("block6").style.gridColumnEnd = "initial";
+}*/
+
+// Reversing all modifications, only better
+
+function reverse(){
+    for ( var i = 1; i< 7; i++ ) {
+        var block = document.getElementById('block'+i).style.backgroundColor = "";
+        var block = document.getElementById('block'+i).style.gridColumnStart = "";
+        var block = document.getElementById('block'+i).style.gridColumnEnd = "";
+        var block = document.getElementById('block'+i).style.gridRowStart = "";
+        var block = document.getElementById('block'+i).style.gridRowEnd = "";
+    }
 }
+
+
+// jQuery Modifications
+
+$(document).ready(function(){
+
+    $("#wrapper div").dblclick(function(){
+        $(this).hide();
+    });
+
+   /* $("header").click(function(){
+            $(this).animate({height: "200px"});
+        });*/
+
+    
+        $("header").click(function(){
+                $(this).toggleClass("headertoggle", 500);
+        });
+
+});
