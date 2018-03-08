@@ -138,8 +138,32 @@ $(document).ready(function(){
         });*/
 
     
-        $("header").click(function(){
+     $("header").click(function(){
                 $(this).toggleClass("headertoggle", 500);
-        });
+    });
 
 });
+
+
+function footerAnimate(){
+
+    var elem = document.getElementById("animate");
+    var h = window.getComputedStyle(elem, null).getPropertyValue('height');
+    var id = setInterval(frame, 1);
+
+    function frame(){
+
+        switch (h){
+            case "60px":
+            for (h = 60; h < 101; h++){
+                elem.style.height = h + 'px';
+            }
+            break;
+            
+            case "100px":
+            for (h = 100; h > 59; h--){
+                elem.style.height = h + 'px';
+            }
+        }
+    }
+}
